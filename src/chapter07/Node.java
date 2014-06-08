@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Node {
-	int n;
+	public int n;
 	public Node next;
 
 	public Node(int n) {
@@ -41,6 +41,16 @@ public class Node {
 		return arrayToList(list);
 	}
 
+	public static void printList(Node n)
+	{
+		while(n != null)
+		{
+			System.out.print(n.n+"->");
+			n = n.next;
+		}
+		System.out.println("null");
+	}
+	
 	public static Node arrayToList(int[] array) {
 		Node n = new Node(array[0]);
 		Node runner = n;
