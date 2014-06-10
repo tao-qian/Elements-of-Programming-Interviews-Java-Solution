@@ -3,11 +3,11 @@ package chapter07;
 import java.util.Arrays;
 import java.util.Random;
 
-public class Node {
-	public int n;
-	public Node next;
+public class Node<T> {
+	public T n;
+	public Node<T> next;
 
-	public Node(int n) {
+	public Node(T n) {
 		this.n = n;
 	}
 
@@ -20,19 +20,19 @@ public class Node {
 		System.out.println("NULL");
 	}
 
-	public static Node randomList(int length, int max) {
+	public static Node<Integer> randomList(int length, int max) {
 		Random r = new Random();
-		Node n = new Node(r.nextInt(max));
+		Node<Integer> n = new Node<Integer>(r.nextInt(max));
 		n.next = null;
 		for (int i = 1; i < length; i++) {
-			Node nn = new Node(r.nextInt(max));
+			Node<Integer> nn = new Node<Integer>(r.nextInt(max));
 			nn.next = n;
 			n = nn;
 		}
 		return n;
 	}
 
-	public static Node randomSortedList(int length, int max) {
+	public static Node<Integer> randomSortedList(int length, int max) {
 		Random r = new Random();
 		int[] list = new int[length];
 		for (int i = 0; i < length; i++)
@@ -51,11 +51,11 @@ public class Node {
 		System.out.println("null");
 	}
 	
-	public static Node arrayToList(int[] array) {
-		Node n = new Node(array[0]);
-		Node runner = n;
+	public static Node<Integer> arrayToList(int[] array) {
+		Node<Integer> n = new Node<Integer>(array[0]);
+		Node<Integer> runner = n;
 		for (int i = 1; i < array.length; i++) {
-			Node nextNode = new Node(array[i]);
+			Node<Integer> nextNode = new Node<Integer>(array[i]);
 			runner.next = nextNode;
 			runner = nextNode;
 		}

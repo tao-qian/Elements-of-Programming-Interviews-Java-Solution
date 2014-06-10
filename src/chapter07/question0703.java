@@ -15,11 +15,11 @@ public class question0703 {
 		System.out.println(getMedian(s));
 	}
 	
-	public static double getMedian(Node s)
+	public static double getMedian(Node<Integer> s)
 	{
-		Node p1 = s;
+		Node<Integer> p1 = s;
 		int count = 1;
-		Node smallest = s;
+		Node<Integer> smallest = s;
 		boolean different = false;
 		
 		while(p1.next != s)

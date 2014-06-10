@@ -2,14 +2,14 @@ package chapter08;
 
 public class question0801 {
 	
-	public class MaxStack extends Stack
+	public class MaxStack extends Stack<Integer>
 	{
-		public Stack max;
+		public Stack<Integer> max;
 		
 		public MaxStack()
 		{
 			super();
-			max = new Stack();
+			max = new Stack<Integer>();
 		}
 		
 		public void push(int n)
@@ -21,7 +21,7 @@ public class question0801 {
 			super.push(n);
 		}
 		
-		public int pop() throws Exception
+		public Integer pop() throws Exception
 		{
 			int n = super.pop();
 			if(n == max.head.n)

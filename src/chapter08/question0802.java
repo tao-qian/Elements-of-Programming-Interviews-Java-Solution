@@ -20,7 +20,7 @@ public class question0802 {
 	
 	public static int evaluateRPN (char[] rpns) throws Exception
 	{
-		Stack numbers = new Stack();
+		Stack<Integer> numbers = new Stack<Integer>();
 		boolean isNegative = false;
 		char op = '.';
 		for(int i = 0;i<rpns.length;i++)

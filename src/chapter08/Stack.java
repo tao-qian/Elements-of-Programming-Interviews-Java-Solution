@@ -2,8 +2,8 @@ package chapter08;
 
 import chapter07.Node;
 
-public class Stack {
-	protected Node head;
+public class Stack<T> {
+	protected Node<T> head;
 	protected int size;
 	
 	public Stack()
@@ -12,27 +12,27 @@ public class Stack {
 		size = 0;
 	}
 	
-	public void push(int n)
+	public void push(T n)
 	{
-		Node newNode = new Node(n);
+		Node<T> newNode = new Node<T>(n);
 		newNode.next = head;
 		head = newNode;
 		size ++;
 	}
 	
-	public int pop() throws Exception
+	public T pop() throws Exception
 	{
 		if(head == null)
 		{
 			throw new Exception("Stack is empty!");
 		}
-		int result = head.n;
+		T result = head.n;
 		head = head.next;
 		size--;
 		return result;
 	}
 	
-	public int peek() throws Exception
+	public T peek() throws Exception
 	{
 		if(head == null)
 		{
