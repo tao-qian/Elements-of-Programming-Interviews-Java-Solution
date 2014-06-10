@@ -3,8 +3,8 @@ package chapter08;
 import chapter07.Node;
 
 public class Stack {
-	Node head;
-	int size;
+	protected Node head;
+	protected int size;
 	
 	public Stack()
 	{
@@ -20,7 +20,7 @@ public class Stack {
 		size ++;
 	}
 	
-	public int pop(int n) throws Exception
+	public int pop() throws Exception
 	{
 		if(head == null)
 		{
@@ -30,5 +30,14 @@ public class Stack {
 		head = head.next;
 		size--;
 		return result;
+	}
+	
+	public int peek() throws Exception
+	{
+		if(head == null)
+		{
+			throw new Exception("Stack is empty!");
+		}
+		return head.n;
 	}
 }
