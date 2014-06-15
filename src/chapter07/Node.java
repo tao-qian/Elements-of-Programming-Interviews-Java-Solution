@@ -12,12 +12,16 @@ public class Node<T> {
 	}
 
 	public void printNode() {
-		Node runner = this;
+		Node<T> runner = this;
 		while (runner != null) {
 			System.out.print(runner.data + "->");
 			runner = runner.next;
 		}
 		System.out.println("NULL");
+	}
+
+	public String toString() {
+		return data.toString();
 	}
 
 	public static Node<Integer> randomList(int length, int max) {
@@ -41,16 +45,15 @@ public class Node<T> {
 		return arrayToList(list);
 	}
 
-	public static void printList(Node n)
-	{
-		while(n != null)
-		{
-			System.out.print(n.data+"->");
+	@SuppressWarnings("rawtypes")
+	public static void printList(Node n) {
+		while (n != null) {
+			System.out.print(n.data + "->");
 			n = n.next;
 		}
 		System.out.println("null");
 	}
-	
+
 	public static Node<Integer> arrayToList(int[] array) {
 		Node<Integer> n = new Node<Integer>(array[0]);
 		Node<Integer> runner = n;

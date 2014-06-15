@@ -2,7 +2,9 @@ package chapter09;
 
 public class question0912 {
 
-	public static TreeNode getCommonAncestor(TreeNode n1, TreeNode n2, TreeNode root) {
+	@SuppressWarnings("rawtypes")
+	public static TreeNode getCommonAncestor(TreeNode n1, TreeNode n2,
+			TreeNode root) {
 		int d1 = getDepth(n1);
 		int d2 = getDepth(n2);
 		if (d1 > d2) {
@@ -19,12 +21,14 @@ public class question0912 {
 		return null;
 	}
 
+	@SuppressWarnings("rawtypes")
 	public static TreeNode moveUp(TreeNode n, int levels) {
 		for (int i = 0; i < levels; i++)
 			n = n.parent;
 		return n;
 	}
 
+	@SuppressWarnings("rawtypes")
 	public static int getDepth(TreeNode n) {
 		int count = 0;
 		while (n.parent != null) {

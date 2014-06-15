@@ -12,11 +12,13 @@ public class question0609 {
 			int m = a * b;
 			int mm = Integer.parseInt(multiply(String.valueOf(a),
 					String.valueOf(b)));
-			int mmm = multiply2(String.valueOf(a),String.valueOf(b));
+			int mmm = multiply2(String.valueOf(a), String.valueOf(b));
 			if (m != mm)
-				System.out.println("mm: "+ a + " * " + b + " = " + m + " not " + mm);
-			if (m != mmm )
-				System.out.println("mmm: "+a + " * " + b + " = " + m + " not " + mmm);
+				System.out.println("mm: " + a + " * " + b + " = " + m + " not "
+						+ mm);
+			if (m != mmm)
+				System.out.println("mmm: " + a + " * " + b + " = " + m
+						+ " not " + mmm);
 		}
 	}
 
@@ -45,28 +47,24 @@ public class question0609 {
 			result = result.substring(1, result.length());
 		return result;
 	}
-	
-	public static int multiply2(String m, String n)
-	{
+
+	public static int multiply2(String m, String n) {
 		int sum = 0;
-		for(int i = 0;i<m.length();i++)
-		{
+		for (int i = 0; i < m.length(); i++) {
 			int md = getNum(m.charAt(i));
 			int subSum = 0;
-			for(int j = 0;j<n.length();j++)
-			{
+			for (int j = 0; j < n.length(); j++) {
 				int nd = getNum(n.charAt(j));
 				subSum *= 10;
-				subSum += md * nd;		
-			} 
+				subSum += md * nd;
+			}
 			sum *= 10;
 			sum += subSum;
 		}
 		return sum;
 	}
-	
-	public static String reverse(String s)
-	{
+
+	public static String reverse(String s) {
 		return new StringBuilder(s).reverse().toString();
 	}
 

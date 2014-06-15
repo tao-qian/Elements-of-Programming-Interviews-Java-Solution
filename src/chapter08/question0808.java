@@ -7,51 +7,36 @@ import chapter07.Node;
 
 public class question0808 {
 
-	public static void main(String[] args) throws Exception
-	{
+	public static void main(String[] args) throws Exception {
 		System.out.println(getShortestPath("/./../tao/../tt/../..//ss"));
 	}
-	
-	public static String getShortestPath(String original) throws Exception
-	{
+
+	public static String getShortestPath(String original) throws Exception {
 		Stack<String> pathStack = new Stack<String>();
 		StringTokenizer st = new StringTokenizer(original);
-		while(st.hasMoreTokens())
-		{
+		while (st.hasMoreTokens()) {
 			String token = st.nextToken("/");
-			if(token.equals(".."))
-			{
-				if(pathStack.size == 0 || pathStack.peek() == "..")
-				{
+			if (token.equals("..")) {
+				if (pathStack.size == 0 || pathStack.peek() == "..") {
 					pathStack.push("..");
-				}
-				else
-				{
+				} else {
 					pathStack.pop();
 				}
-			}
-			else if(token.equals("."))
-			{
+			} else if (token.equals(".")) {
 				continue;
-			}
-			else if(token.equals(""))
-			{
+			} else if (token.equals("")) {
 				continue;
-			}
-			else 
-			{
+			} else {
 				pathStack.push(token);
 			}
 		}
 		StringBuilder sb = new StringBuilder();
-		if(original.startsWith("/"))
-		{
+		if (original.startsWith("/")) {
 			sb.append("/");
 		}
 		LinkedList<Node<String>> list = pathStack.toLinkedList();
-		for(Node<String> s : list)
-		{
-			sb.append("/"+s.data);
+		for (Node<String> s : list) {
+			sb.append("/" + s.data);
 		}
 		return sb.toString();
 	}

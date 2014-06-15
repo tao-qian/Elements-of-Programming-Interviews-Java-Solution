@@ -2,6 +2,7 @@ package chapter07;
 
 public class question0704 {
 	// Not tested
+	@SuppressWarnings("rawtypes")
 	public static Node findStart(Node n1, Node n2) {
 		int l1 = getLength(n1);
 		int l2 = getLength(n2);
@@ -21,6 +22,7 @@ public class question0704 {
 		return null;
 	}
 
+	@SuppressWarnings("rawtypes")
 	public static Node advance(Node n, int steps) {
 		for (int i = 0; i < steps; i++) {
 			n = n.next;
@@ -28,6 +30,7 @@ public class question0704 {
 		return n;
 	}
 
+	@SuppressWarnings("rawtypes")
 	public static int getLength(Node n) {
 		int length = 0;
 		while (n != null) {

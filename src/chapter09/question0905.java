@@ -2,6 +2,7 @@ package chapter09;
 
 public class question0905 {
 	// Not tested
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public void inOrder(TreeNode n) {
 		n.parent = null;
 		TreeNode current = n;
@@ -33,6 +34,7 @@ public class question0905 {
 	}
 
 	// Not tested
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public void preorder(TreeNode n) {
 		n.parent = null;
 		TreeNode current = n;
@@ -56,6 +58,7 @@ public class question0905 {
 			} else if (prev == current.right) {
 				next = current.parent;
 			}
+			current = next;
 		}
 	}
 

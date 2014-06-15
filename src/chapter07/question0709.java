@@ -3,10 +3,11 @@ package chapter07;
 public class question0709 {
 
 	public static void main(String[] args) {
-		Node list = Node.arrayToList(new int[] { 0, 1, 2, 3, 4 });
+		Node<Integer> list = Node.arrayToList(new int[] { 0, 1, 2, 3, 4 });
 		reverse(list).printNode();
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static Node reverse(Node n) {
 		if (n == null)
 			return null;
