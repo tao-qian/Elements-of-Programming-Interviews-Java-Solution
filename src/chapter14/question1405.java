@@ -1,22 +1,22 @@
 package chapter14;
 
-import chapter09.Node;
+import chapter09.TreeNode;
 
 public class question1405 {
-	public static Node searchGreaterK(Node root, int k) {
+	public static TreeNode<Integer> searchGreaterK(TreeNode<Integer> root, int k) {
 		if (root == null)
 			return null;
-		Node greater = null;
+		TreeNode<Integer> greater = null;
 		boolean foundK = false;
 		while (root != null) {
-			if (root.n > k) {
+			if (root.data > k) {
 				greater = root;
 				root = root.left;
 			}
-			if (root.n < k) {
+			if (root.data < k) {
 				root = root.right;
 			}
-			if (root.n == k) {
+			if (root.data == k) {
 				foundK = true;
 				root = root.left;
 			}

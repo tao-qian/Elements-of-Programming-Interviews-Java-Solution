@@ -4,13 +4,16 @@ import java.util.LinkedList;
 
 import chapter07.Node;
 
-public class Stack<T> {
+public class Queue<T> {
+	
 	protected Node<T> head;
+	protected Node<T> tail;
 	protected int size;
 	
-	public Stack()
+	public Queue()
 	{
 		head = null;
+		tail = null;
 		size = 0;
 	}
 	
@@ -20,28 +23,39 @@ public class Stack<T> {
 		Node<T> p = head;
 		while(p != null)
 		{
-			list.addFirst(p);
+			list.addLast(p);
 			p = p.next;
 		}
 		return list;
 	}
 	
-	public void push(T n)
+	public void enqueue(T n)
 	{
 		Node<T> newNode = new Node<T>(n);
-		newNode.next = head;
-		head = newNode;
+		if(tail == null)
+		{
+			head = newNode;
+		}
+		else
+		{
+			tail.next = newNode;
+		}
+		tail = newNode;
 		size ++;
 	}
 	
-	public T pop() throws Exception
+	public T dequeue() throws Exception
 	{
 		if(head == null)
 		{
-			throw new Exception("Stack is empty!");
+			throw new Exception("queue is empty!");
 		}
 		T result = head.data;
 		head = head.next;
+		if(head == null)
+		{
+			tail = null;
+		}
 		size--;
 		return result;
 	}
@@ -50,8 +64,9 @@ public class Stack<T> {
 	{
 		if(head == null)
 		{
-			throw new Exception("Stack is empty!");
+			throw new Exception("Queue is empty!");
 		}
 		return head.data;
 	}
+
 }

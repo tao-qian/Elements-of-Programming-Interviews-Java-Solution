@@ -4,17 +4,17 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Node<T> {
-	public T n;
+	public T data;
 	public Node<T> next;
 
 	public Node(T n) {
-		this.n = n;
+		this.data = n;
 	}
 
 	public void printNode() {
 		Node runner = this;
 		while (runner != null) {
-			System.out.print(runner.n + "->");
+			System.out.print(runner.data + "->");
 			runner = runner.next;
 		}
 		System.out.println("NULL");
@@ -45,7 +45,7 @@ public class Node<T> {
 	{
 		while(n != null)
 		{
-			System.out.print(n.n+"->");
+			System.out.print(n.data+"->");
 			n = n.next;
 		}
 		System.out.println("null");

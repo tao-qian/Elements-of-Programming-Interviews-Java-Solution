@@ -1,19 +1,19 @@
 package chapter08;
 
-import chapter09.Node;
+import chapter09.TreeNode;
 import java.util.Stack;
 
 public class question0803 {
 	
-	public static void printTree(Node root) throws Exception 
+	public static void printTree(TreeNode root) throws Exception 
 	{
-		Stack<Node> s = new Stack<Node>();
+		Stack<TreeNode> s = new Stack<TreeNode>();
 		while(s.size() != 0)
 		{
-			Node node = s.pop();
+			TreeNode node = s.pop();
 			if(node.left == null)
 			{
-				System.out.print(node.n+" ");
+				System.out.print(node.data+" ");
 				if(node.right != null)
 				{
 					s.push(node.right);

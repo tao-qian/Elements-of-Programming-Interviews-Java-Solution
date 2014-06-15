@@ -2,15 +2,15 @@ package chapter09;
 
 public class question0905 {
 	// Not tested
-	public void inOrder(Node n) {
+	public void inOrder(TreeNode n) {
 		n.parent = null;
-		Node current = n;
-		Node prev = null;
+		TreeNode current = n;
+		TreeNode prev = null;
 		while (current != null) {
-			Node next = null;
+			TreeNode next = null;
 			if (prev == null || prev == current.parent) {
 				if (current.left == null) {
-					System.out.println(current.n);
+					System.out.println(current.data);
 					if (current.right == null)
 						next = current.parent;
 					else
@@ -19,7 +19,7 @@ public class question0905 {
 					next = current.left;
 				}
 			} else if (prev == current.left) {
-				System.out.println(current.n);
+				System.out.println(current.data);
 				if (current.right == null)
 					next = current.parent;
 				else
@@ -33,14 +33,14 @@ public class question0905 {
 	}
 
 	// Not tested
-	public void preorder(Node n) {
+	public void preorder(TreeNode n) {
 		n.parent = null;
-		Node current = n;
-		Node prev = null;
+		TreeNode current = n;
+		TreeNode prev = null;
 		while (current != null) {
-			Node next = null;
+			TreeNode next = null;
 			if (prev == null || prev == current.parent) {
-				System.out.println(current.n);
+				System.out.println(current.data);
 				if (current.left != null) {
 					next = current.left;
 				} else if (current.right != null) {

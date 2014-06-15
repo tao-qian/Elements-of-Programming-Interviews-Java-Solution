@@ -14,7 +14,7 @@ public class question0801 {
 		
 		public void push(int n)
 		{
-			if(max.head == null || max.head.n <= n)
+			if(max.head == null || max.head.data <= n)
 			{
 				max.push(n);
 			}
@@ -24,7 +24,7 @@ public class question0801 {
 		public Integer pop() throws Exception
 		{
 			int n = super.pop();
-			if(n == max.head.n)
+			if(n == max.head.data)
 			{
 				max.pop();
 			}

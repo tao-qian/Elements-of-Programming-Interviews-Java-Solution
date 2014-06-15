@@ -16,7 +16,7 @@ public class question0701 {
 		Node<Integer> pr = r;
 		Node<Integer> top = l;
 		Node<Integer> last = l;
-		if (l.n > r.n) {
+		if (l.data > r.data) {
 			top = r;
 			last = r;
 			pr = pr.next;
@@ -24,7 +24,7 @@ public class question0701 {
 			pl = pl.next;
 		}
 		while (pl != null && pr != null) {
-			if (pl.n > pr.n) {
+			if (pl.data > pr.data) {
 				last.next = pr;
 				last = pr;
 				pr = pr.next;

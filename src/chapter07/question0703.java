@@ -24,11 +24,11 @@ public class question0703 {
 		
 		while(p1.next != s)
 		{
-			if(p1.next.n < p1.n)
+			if(p1.next.data < p1.data)
 			{
 				smallest = p1.next;
 			}
-			if(!different && p1.next.n != p1.n)
+			if(!different && p1.next.data != p1.data)
 			{
 				different = true;
 			}
@@ -37,7 +37,7 @@ public class question0703 {
 		}
 		if(!different)
 		{
-			return s.n;
+			return s.data;
 		}
 		if(count % 2 == 1)
 		{
@@ -45,12 +45,12 @@ public class question0703 {
 			{
 				smallest = smallest.next;
 			}
-			return smallest.n;
+			return smallest.data;
 		}
 		for(int i = 0;i<count/2-1;i++)
 		{
 			smallest = smallest.next;
 		}
-		return ((double)smallest.n + smallest.next.n)/2;
+		return ((double)smallest.data + smallest.next.data)/2;
 	}
 }

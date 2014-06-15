@@ -4,7 +4,7 @@ public class question0707 {
 	
 	public static void deleteNode (Node s)
 	{
-		s.n = s.next.n;
+		s.data = s.next.data;
 		s.next = s.next.next;
 	}
 }

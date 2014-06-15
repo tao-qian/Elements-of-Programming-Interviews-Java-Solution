@@ -2,7 +2,7 @@ package chapter09;
 
 public class question0912 {
 
-	public static Node getCommonAncestor(Node n1, Node n2, Node root) {
+	public static TreeNode getCommonAncestor(TreeNode n1, TreeNode n2, TreeNode root) {
 		int d1 = getDepth(n1);
 		int d2 = getDepth(n2);
 		if (d1 > d2) {
@@ -19,13 +19,13 @@ public class question0912 {
 		return null;
 	}
 
-	public static Node moveUp(Node n, int levels) {
+	public static TreeNode moveUp(TreeNode n, int levels) {
 		for (int i = 0; i < levels; i++)
 			n = n.parent;
 		return n;
 	}
 
-	public static int getDepth(Node n) {
+	public static int getDepth(TreeNode n) {
 		int count = 0;
 		while (n.parent != null) {
 			n = n.parent;
