@@ -8,5 +8,8 @@ public class TreeNode<T> {
 
 	public TreeNode(T n) {
 		this.data = n;
+		left = null;
+		right = null;
+		parent = null;
 	}
 }

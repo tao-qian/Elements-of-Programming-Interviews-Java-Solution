@@ -1,9 +1,19 @@
 package chapter09;
 
 public class question0905 {
-	// Not tested
+	
+	public static void main(String[] args)
+	{
+		TreeNode<Integer> node = new TreeNode<Integer>(2);
+		node.left = new TreeNode<Integer>(1);
+		node.right = new TreeNode<Integer>(3);
+		node.left.parent = node;
+		node.right.parent=node;
+		postorder(node);
+	}
+	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public void inOrder(TreeNode n) {
+	public static void inorder(TreeNode n) {
 		n.parent = null;
 		TreeNode current = n;
 		TreeNode prev = null;
@@ -35,7 +45,7 @@ public class question0905 {
 
 	// Not tested
 	@SuppressWarnings({ "rawtypes", "unchecked" })
-	public void preorder(TreeNode n) {
+	public static void preorder(TreeNode n) {
 		n.parent = null;
 		TreeNode current = n;
 		TreeNode prev = null;
@@ -58,8 +68,61 @@ public class question0905 {
 			} else if (prev == current.right) {
 				next = current.parent;
 			}
+			prev = current;
 			current = next;
 		}
 	}
+	
+	// Not tested
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	public static void postorder(TreeNode root)
+	{
+		root.parent = null;
+		TreeNode prev = null;
+		TreeNode current = root;
+		while(current != null)
+		{
+			TreeNode next = null;
+			if(prev == null || prev == current.parent)
+			{
+				if(current.left == null)
+				{
+					if(current.right == null)
+					{
+						System.out.println(current.data);
+						next = current.parent;
+					}
+					else
+					{
+						next = current.right;
+					}
+				}
+				else
+				{
+					next = current.left;
+				}
+			}
+			else if(prev == current.left)
+			{
+				if(current.right == null)
+				{
+					System.out.println(current.data);
+					next = current.parent;
+				}
+				else
+				{
+					next = current.right;
+				}
+			}
+			else if(prev == current.right)
+			{
+				System.out.println(current.data);
+				next = current.parent;
+			}
+			prev = current;
+			current = next;
+		}
+	}
+
 
 }

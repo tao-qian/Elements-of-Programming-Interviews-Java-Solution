@@ -6,7 +6,7 @@ public class question0619 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println(switchWords("  tao loves yihan  "));
+		System.out.println(switchWords("  tao loves zx"));
 	}
 
 	public static String switchWords(String s) {
