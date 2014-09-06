@@ -1,7 +1,7 @@
 package Util;
 
-import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @SuppressWarnings({ "rawtypes" })
 public class Utility {
@@ -29,9 +29,9 @@ public class Utility {
 		return sb.toString();
 	}
 
-	public static void print(HashSet<Integer> s) {
+	public static void print(Set s) {
 		System.out.print("{ ");
-		for (Integer i : s)
+		for (Object i : s)
 			System.out.print(i + " ");
 		System.out.print("}");
 	}
