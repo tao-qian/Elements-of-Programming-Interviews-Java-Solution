@@ -10,7 +10,7 @@ public class question1404 {
 				found = n;
 				n = n.left;
 			} else if (n.data > num) {
-				n = n.right;
+				n = n.left;
 			} else if (n.data < num) {
 				n = n.right;
 			}

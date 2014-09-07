@@ -9,6 +9,7 @@ public class question0909 {
 		String[] preorder = new String[] {"H","B","F","null","null","E","A","null","null","null","C","null","D","null","G","I","null","null","null"};
 		@SuppressWarnings("rawtypes")
 		TreeNode root = question0908.reconstructTree(preorder);
+		TreeNode.beautifulPrint(root);
 		Util.Utility.print(getLeaves(root));
 	}
 	

@@ -23,7 +23,14 @@ public class Utility {
 		StringBuilder sb = new StringBuilder();
 		sb.append("{ ");
 		for (Object item : l) {
-			sb.append(item.toString() + " ");
+			if(item == null)
+			{
+				sb.append("null");
+			}
+			else
+			{
+				sb.append(item.toString() + " ");
+			}
 		}
 		sb.append("}");
 		return sb.toString();
