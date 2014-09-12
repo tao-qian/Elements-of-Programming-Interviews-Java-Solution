@@ -28,11 +28,11 @@ public class question1502 {
 		int r2 = m + 1;
 		int r3 = p;
 		while (r1 <= m && r2 <= q) {
-			if (a[r1] < a[r2]) {
+			if (a[r1] <= a[r2]) {
 				a[r3] = helper[r1 - p];
 				r1++;
 			} else {
-				inversion++;
+				inversion += m - r1 + 1;
 				a[r3] = helper[r2 - p];
 				r2++;
 			}

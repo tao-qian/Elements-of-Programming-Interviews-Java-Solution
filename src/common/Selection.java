@@ -45,6 +45,7 @@ public class Selection {
 		int leftEnd = partition(array, left, right, pivot); // returns end of
 															// left partition
 		int leftSize = leftEnd - left + 1;
+		// The + 1 here is used so that our index start from 0, it can be removed
 		if (leftSize == rank + 1) {
 			return max(array, left, leftEnd);
 		} else if (rank < leftSize) {
@@ -58,6 +59,5 @@ public class Selection {
 		int temp = a[p];
 		a[p] = a[q];
 		a[q] = temp;
-
 	}
 }

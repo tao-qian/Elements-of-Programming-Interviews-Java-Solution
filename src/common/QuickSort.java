@@ -5,7 +5,7 @@ import Util.Utility;
 public class QuickSort {
 
 	public static void main(String[] args) {
-		int[] array = new int[] { 2, 3, 4 };
+		int[] array = new int[] { 2,9 ,4,2,3,2,1,4,5,1 };
 		quicksort(array, 0, array.length - 1);
 		Utility.print(array);
 	}
@@ -34,11 +34,5 @@ public class QuickSort {
 			}
 		}
 		return p;
-	}
-
-	public static void swap(int[] a, int p, int q) {
-		int temp = a[p];
-		a[p] = a[q];
-		a[q] = temp;
 	}
 }

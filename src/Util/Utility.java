@@ -6,6 +6,19 @@ import java.util.Set;
 @SuppressWarnings({ "rawtypes" })
 public class Utility {
 
+	public static void print(Object[] array) {
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + " ");
+		}
+		System.out.println();
+	}
+
+	public static void print(Object[][] array) {
+		for (int i = 0; i < array.length; i++) {
+			print(array[i]);
+		}
+	}
+	
 	public static void print(int[] array) {
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i] + " ");
