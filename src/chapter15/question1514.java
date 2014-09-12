@@ -4,7 +4,7 @@ public class question1514 {
 	
 	public static void main(String[] args)
 	{
-		System.out.println(combination(5,5));
+		System.out.println(combination(10,5));
 	}
 	
 	public static int combination(int n, int k)
