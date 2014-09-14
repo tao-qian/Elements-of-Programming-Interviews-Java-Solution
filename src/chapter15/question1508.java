@@ -77,7 +77,7 @@ public class question1508 {
 		}
 		Util.Utility.print(leftRecWidth);
 		Util.Utility.print(rightRecWidth);
-		//System.out.println(maxIndex - leftRecWidth[maxIndex]+","+(maxIndex + rightRecWidth[maxIndex]));
+		System.out.println(maxIndex - leftRecWidth[maxIndex]+","+(maxIndex + rightRecWidth[maxIndex]));
 		return max;
 	}
 }
