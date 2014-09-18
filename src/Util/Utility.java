@@ -18,7 +18,7 @@ public class Utility {
 			print(array[i]);
 		}
 	}
-	
+
 	public static void print(int[] array) {
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(array[i] + " ");
@@ -36,12 +36,9 @@ public class Utility {
 		StringBuilder sb = new StringBuilder();
 		sb.append("{ ");
 		for (Object item : l) {
-			if(item == null)
-			{
+			if (item == null) {
 				sb.append("null");
-			}
-			else
-			{
+			} else {
 				sb.append(item.toString() + " ");
 			}
 		}

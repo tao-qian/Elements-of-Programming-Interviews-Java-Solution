@@ -7,7 +7,6 @@ public class PivotInRotatedArray {
 		System.out.println(findRotationPoint(a));
 	}
 
-	
 	public static int findRotationPoint(int[] a) {
 		int p = 0;
 		int q = a.length - 1;
