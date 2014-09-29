@@ -41,7 +41,7 @@ public class question1312 {
 			Interval current = map.pollFirst();
 			HashSet<Interval> toBeRemoved = new HashSet<Interval>();
 			for (Interval i : map) {
-				if (i.end <= current.end) {
+				if (i.end <= current.end && i.start >= current.start) {
 					toBeRemoved.add(i);
 				}
 			}

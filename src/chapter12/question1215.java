@@ -5,7 +5,7 @@ import java.util.*;
 public class question1215 {
 
 	public static void main(String[] args) {
-		String[] a = { "a", "b", "c", "d", "a", "c", "d" };
+		String[] a = { "d","a", "b", "c", "d", "a", "c", "d" };
 		String[] q = { "a", "d" };
 		Util.Utility.print(subarraySequentialCoveringSet(a, q));
 	}
@@ -20,6 +20,10 @@ public class question1215 {
 
 		int[] lastSeen = new int[q.length];
 		int[] startingIndexForShortest = new int[a.length];
+		for(int i = 0;i<lastSeen.length;i++)
+		{
+			lastSeen[i] = -1;
+		}
 
 		// Used to record the best result
 		int shortestLength = Integer.MAX_VALUE;
@@ -36,6 +40,10 @@ public class question1215 {
 				startingIndexForShortest[i] = i;
 			} else {
 				int lastWordLastSeen = lastSeen[wordIndex - 1];
+				if(lastWordLastSeen == -1)
+				{
+					continue;
+				}
 				startingIndexForShortest[i] = startingIndexForShortest[lastWordLastSeen];
 				// Check for the case when we matched all words in q
 				if (wordIndex == q.length - 1) {

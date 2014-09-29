@@ -1,6 +1,6 @@
 package chapter11;
 
-public class question1108 {
+public class question1109 {
 
 	public static void main(String[] args) {
 		System.out.println(squareRoot((float) 0.8, (float) 0.0001));

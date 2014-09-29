@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class MinPriorityQueue<T> {
 
 	public static void main(String[] args) {
+		
 		MinPriorityQueue<Integer> queue = new MinPriorityQueue<>();
 		queue.insert(2, 2);
 		queue.insert(3, 3);

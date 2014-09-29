@@ -4,6 +4,7 @@ import java.util.*;
 
 public class ShortestPath {
 
+	// See question1609 for Dijkstra with adjacency list
 	public static int NO_PATH = -1;
 
 	public static int Dijkstra(int[][] matrix, int start, int end) {
@@ -30,10 +31,6 @@ public class ShortestPath {
 
 			unvisited.remove(closestNode);
 
-			if (closestNode == end) {
-				return shortestDistance;
-			}
-
 			for (int i = 0; i < matrix[closestNode].length; i++) {
 				if (matrix[closestNode][i] == NO_PATH || !unvisited.contains(i)) {
 					continue;
@@ -44,6 +41,6 @@ public class ShortestPath {
 				}
 			}
 		}
-		return -1;
+		return distance[end];
 	}
 }
