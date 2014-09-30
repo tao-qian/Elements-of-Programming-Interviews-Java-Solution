@@ -1,11 +1,14 @@
 package common;
 
+import Util.Utility;
+
 public class KMP {
 
 	public static void main(String[] args) {
 		String w = "abc";
 		String s = "cdabdabc";
 		System.out.println(stringMatching(w, s));
+		Utility.print(partialMatchTable("ababaababa"));
 	}
 
 	public static int stringMatching(String w, String s) {
