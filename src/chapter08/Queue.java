@@ -2,12 +2,12 @@ package chapter08;
 
 import java.util.LinkedList;
 
-import chapter07.Node;
+import chapter07.LinkedListNode;
 
 public class Queue<T> {
 
-	protected Node<T> head;
-	protected Node<T> tail;
+	protected LinkedListNode<T> head;
+	protected LinkedListNode<T> tail;
 	protected int size;
 
 	public Queue() {
@@ -16,9 +16,9 @@ public class Queue<T> {
 		size = 0;
 	}
 
-	public LinkedList<Node<T>> toLinkedList() {
-		LinkedList<Node<T>> list = new LinkedList<Node<T>>();
-		Node<T> p = head;
+	public LinkedList<LinkedListNode<T>> toLinkedList() {
+		LinkedList<LinkedListNode<T>> list = new LinkedList<LinkedListNode<T>>();
+		LinkedListNode<T> p = head;
 		while (p != null) {
 			list.addLast(p);
 			p = p.next;
@@ -27,7 +27,7 @@ public class Queue<T> {
 	}
 
 	public void enqueue(T n) {
-		Node<T> newNode = new Node<T>(n);
+		LinkedListNode<T> newNode = new LinkedListNode<T>(n);
 		if (tail == null) {
 			head = newNode;
 		} else {

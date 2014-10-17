@@ -20,7 +20,7 @@ public class question1516 {
 		// We can safely start from i=1
 		// because current is initialized to be all 1.
 		for (int i = 1; i < map.length; i++) {
-			for (int j = 0; j < map[i].length; j++) {
+			for (int j = map[i].length-1; j >= 0; j--) {
 				// If obstacle
 				if (!map[i][j]) {
 					current[j] = 0;

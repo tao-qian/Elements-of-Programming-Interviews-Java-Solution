@@ -3,11 +3,11 @@ package chapter07;
 public class question0704 {
 	// Not tested
 	@SuppressWarnings("rawtypes")
-	public static Node findStart(Node n1, Node n2) {
+	public static LinkedListNode findStart(LinkedListNode n1, LinkedListNode n2) {
 		int l1 = getLength(n1);
 		int l2 = getLength(n2);
-		Node r1 = n1;
-		Node r2 = n2;
+		LinkedListNode r1 = n1;
+		LinkedListNode r2 = n2;
 		if (l1 > l2) {
 			advance(r1, l1 - l2);
 		} else if (l2 > l1) {
@@ -23,7 +23,7 @@ public class question0704 {
 	}
 
 	@SuppressWarnings("rawtypes")
-	public static Node advance(Node n, int steps) {
+	public static LinkedListNode advance(LinkedListNode n, int steps) {
 		for (int i = 0; i < steps; i++) {
 			n = n.next;
 		}
@@ -31,7 +31,7 @@ public class question0704 {
 	}
 
 	@SuppressWarnings("rawtypes")
-	public static int getLength(Node n) {
+	public static int getLength(LinkedListNode n) {
 		int length = 0;
 		while (n != null) {
 			n = n.next;

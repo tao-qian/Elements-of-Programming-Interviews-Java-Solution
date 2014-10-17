@@ -3,7 +3,7 @@ package chapter08;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-import chapter07.Node;
+import chapter07.LinkedListNode;
 
 public class question0808 {
 
@@ -34,8 +34,8 @@ public class question0808 {
 		if (original.startsWith("/")) {
 			sb.append("/");
 		}
-		LinkedList<Node<String>> list = pathStack.toLinkedList();
-		for (Node<String> s : list) {
+		LinkedList<LinkedListNode<String>> list = pathStack.toLinkedList();
+		for (LinkedListNode<String> s : list) {
 			sb.append("/" + s.data);
 		}
 		return sb.toString();

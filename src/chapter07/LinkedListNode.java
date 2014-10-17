@@ -3,16 +3,16 @@ package chapter07;
 import java.util.Arrays;
 import java.util.Random;
 
-public class Node<T> {
+public class LinkedListNode<T> {
 	public T data;
-	public Node<T> next;
+	public LinkedListNode<T> next;
 
-	public Node(T n) {
+	public LinkedListNode(T n) {
 		this.data = n;
 	}
 
 	public void printNode() {
-		Node<T> runner = this;
+		LinkedListNode<T> runner = this;
 		while (runner != null) {
 			System.out.print(runner.data + "->");
 			runner = runner.next;
@@ -24,19 +24,19 @@ public class Node<T> {
 		return data.toString();
 	}
 
-	public static Node<Integer> randomList(int length, int max) {
+	public static LinkedListNode<Integer> randomList(int length, int max) {
 		Random r = new Random();
-		Node<Integer> n = new Node<Integer>(r.nextInt(max));
+		LinkedListNode<Integer> n = new LinkedListNode<Integer>(r.nextInt(max));
 		n.next = null;
 		for (int i = 1; i < length; i++) {
-			Node<Integer> nn = new Node<Integer>(r.nextInt(max));
+			LinkedListNode<Integer> nn = new LinkedListNode<Integer>(r.nextInt(max));
 			nn.next = n;
 			n = nn;
 		}
 		return n;
 	}
 
-	public static Node<Integer> randomSortedList(int length, int max) {
+	public static LinkedListNode<Integer> randomSortedList(int length, int max) {
 		Random r = new Random();
 		int[] list = new int[length];
 		for (int i = 0; i < length; i++)
@@ -46,7 +46,7 @@ public class Node<T> {
 	}
 
 	@SuppressWarnings("rawtypes")
-	public static void printList(Node n) {
+	public static void printList(LinkedListNode n) {
 		while (n != null) {
 			System.out.print(n.data + "->");
 			n = n.next;
@@ -54,11 +54,11 @@ public class Node<T> {
 		System.out.println("null");
 	}
 
-	public static Node<Integer> arrayToList(int[] array) {
-		Node<Integer> n = new Node<Integer>(array[0]);
-		Node<Integer> runner = n;
+	public static LinkedListNode<Integer> arrayToList(int[] array) {
+		LinkedListNode<Integer> n = new LinkedListNode<Integer>(array[0]);
+		LinkedListNode<Integer> runner = n;
 		for (int i = 1; i < array.length; i++) {
-			Node<Integer> nextNode = new Node<Integer>(array[i]);
+			LinkedListNode<Integer> nextNode = new LinkedListNode<Integer>(array[i]);
 			runner.next = nextNode;
 			runner = nextNode;
 		}

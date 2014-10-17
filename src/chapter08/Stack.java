@@ -2,10 +2,10 @@ package chapter08;
 
 import java.util.LinkedList;
 
-import chapter07.Node;
+import chapter07.LinkedListNode;
 
 public class Stack<T> {
-	protected Node<T> head;
+	protected LinkedListNode<T> head;
 	protected int size;
 
 	public Stack() {
@@ -13,9 +13,9 @@ public class Stack<T> {
 		size = 0;
 	}
 
-	public LinkedList<Node<T>> toLinkedList() {
-		LinkedList<Node<T>> list = new LinkedList<Node<T>>();
-		Node<T> p = head;
+	public LinkedList<LinkedListNode<T>> toLinkedList() {
+		LinkedList<LinkedListNode<T>> list = new LinkedList<LinkedListNode<T>>();
+		LinkedListNode<T> p = head;
 		while (p != null) {
 			list.addFirst(p);
 			p = p.next;
@@ -24,7 +24,7 @@ public class Stack<T> {
 	}
 
 	public void push(T n) {
-		Node<T> newNode = new Node<T>(n);
+		LinkedListNode<T> newNode = new LinkedListNode<T>(n);
 		newNode.next = head;
 		head = newNode;
 		size++;

@@ -5,8 +5,8 @@ public class question0703 {
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static void main(String[] args) {
 		int[] a = new int[] { 2, 2, 2, 3, 3, 4, 4 };
-		Node s = Node.arrayToList(a);
-		Node p1 = s;
+		LinkedListNode s = LinkedListNode.arrayToList(a);
+		LinkedListNode p1 = s;
 		for (int i = 0; i < a.length - 1; i++) {
 			p1 = p1.next;
 		}
@@ -14,10 +14,10 @@ public class question0703 {
 		System.out.println(getMedian(s));
 	}
 
-	public static double getMedian(Node<Integer> s) {
-		Node<Integer> p1 = s;
+	public static double getMedian(LinkedListNode<Integer> s) {
+		LinkedListNode<Integer> p1 = s;
 		int count = 1;
-		Node<Integer> smallest = s;
+		LinkedListNode<Integer> smallest = s;
 		boolean different = false;
 
 		while (p1.next != s) {

@@ -3,9 +3,9 @@ package chapter07;
 public class question0702 {
 
 	@SuppressWarnings("rawtypes")
-	public static Node checkCycle(Node start) {
-		Node p1 = start;
-		Node p2 = start;
+	public static LinkedListNode checkCycle(LinkedListNode start) {
+		LinkedListNode p1 = start;
+		LinkedListNode p2 = start;
 		if (p2 == null) {
 			return null;
 		}
@@ -16,7 +16,7 @@ public class question0702 {
 				// Count the length of the cycle
 				// and advance a counter from the start
 				// by the same amount
-				Node p3 = start;
+				LinkedListNode p3 = start;
 				while (p1 != p2) {
 					p1 = p1.next;
 					p3 = p3.next;

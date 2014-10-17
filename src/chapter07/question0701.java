@@ -3,19 +3,19 @@ package chapter07;
 public class question0701 {
 
 	public static void main(String[] args) {
-		Node<Integer> n1 = Node.randomSortedList(4, 100);
-		Node<Integer> n2 = Node.randomSortedList(1, 100);
+		LinkedListNode<Integer> n1 = LinkedListNode.randomSortedList(4, 100);
+		LinkedListNode<Integer> n2 = LinkedListNode.randomSortedList(1, 100);
 		n1.printNode();
 		n2.printNode();
-		Node<Integer> n3 = merge(n1, n2);
+		LinkedListNode<Integer> n3 = merge(n1, n2);
 		n3.printNode();
 	}
 
-	public static Node<Integer> merge(Node<Integer> l, Node<Integer> r) {
-		Node<Integer> pl = l;
-		Node<Integer> pr = r;
-		Node<Integer> top = l;
-		Node<Integer> last = l;
+	public static LinkedListNode<Integer> merge(LinkedListNode<Integer> l, LinkedListNode<Integer> r) {
+		LinkedListNode<Integer> pl = l;
+		LinkedListNode<Integer> pr = r;
+		LinkedListNode<Integer> top = l;
+		LinkedListNode<Integer> last = l;
 		if (l.data > r.data) {
 			top = r;
 			last = r;

@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Random;
 
 import Util.Utility;
-import chapter07.Node;
+import chapter07.LinkedListNode;
 
 public class question0813 {
 
@@ -37,7 +37,7 @@ public class question0813 {
 		private LinkedList<Integer> max;
 
 		public String toString() {
-			LinkedList<Node<Integer>> l = q.toLinkedList();
+			LinkedList<LinkedListNode<Integer>> l = q.toLinkedList();
 			String result = "q " + Utility.toString(l) + "\n";
 			result += "max " + Utility.toString(max);
 			return result;
@@ -48,9 +48,9 @@ public class question0813 {
 		}
 
 		public int naiveMax() {
-			LinkedList<Node<Integer>> l = q.toLinkedList();
+			LinkedList<LinkedListNode<Integer>> l = q.toLinkedList();
 			int max = Integer.MIN_VALUE;
-			for (Node<Integer> n : l) {
+			for (LinkedListNode<Integer> n : l) {
 				if (n.data > max) {
 					max = n.data;
 				}
