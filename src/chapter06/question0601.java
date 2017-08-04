@@ -23,8 +23,7 @@ public class question0601 {
 			} else if (a[equal] == pivot) {
 				equal++;
 			} else {
-				swap(a, equal, larger);
-				larger--;
+				swap(a, equal, --larger);
 			}
 		}
 	}
